@@ -1,3 +1,6 @@
 <p>
-    hello-world {{nome}}!
+    <input type="text" [(ngModel)]="nome">
+</p> 
+<p *ngIf="nome">
+    Hello World, {{nome}}!
 </p>

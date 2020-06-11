@@ -1,14 +1,15 @@
-<!-- <p>{{livros | json}}!</p> -->
-<ul>
-    <li *ngFor="let livro of livros">
-        <p>
-            {{livro.titulo}} - <em>{{livro.autor}}</em>
-        </p>
-        <p>
-            <!-- <button *ngIf="livro.disponivel === true">Comprar</button> -->
-            <button *ngIf="livro.disponivel">Comprar</button>
-            <!-- <button *ngIf="livro.disponivel === false" disabled>Indisponível</button> -->
-            <button *ngIf="!livro.disponivel" disabled>Indisponível</button>
-        <p>
-    </li>
-</ul>
+<section>
+    <h2>
+        Livros
+    </h2>
+    <ol>
+        <li *ngFor="let livro of livros">
+            <strong>
+                {{livro.titulo}} 
+            </strong>
+            <em *ngFor="let autor of livro.autores">
+                - {{autor.nome}}
+            </em>
+        </li>
+    </ol>
+</section>

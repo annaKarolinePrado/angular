@@ -8,11 +8,15 @@ import { Component, OnInit } from '@angular/core';
 export class HelloWorldComponent implements OnInit {
 
   nome: string;
-
+ 
   constructor() {
   }
 
   ngOnInit(): void {
+  }
+
+  limpar() {
+    this.nome = '';
   }
   
 }
